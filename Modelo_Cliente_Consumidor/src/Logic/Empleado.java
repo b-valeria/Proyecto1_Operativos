@@ -5,27 +5,25 @@
 package Logic;
 
 public abstract class Empleado {
-    protected String nombre;
     protected double sueldoPorHora;
-    protected int horasTrabajadas;
+    protected final int horasTrabajadas; // Es final, ya que siempre será 24
 
-    public Empleado(String nombre, double sueldoPorHora) {
-        this.nombre = nombre;
+    public Empleado(double sueldoPorHora) {
         this.sueldoPorHora = sueldoPorHora;
-        this.horasTrabajadas = 0;
+        this.horasTrabajadas = 24; // Asignamos 24 horas directamente
     }
 
     public double calcularSalario() {
-        return sueldoPorHora * horasTrabajadas;
+        return sueldoPorHora * horasTrabajadas; // Calcula salarío basado en 24 horas
     }
 
-    // Getters y Setters
-    public String getNombre() {
-        return nombre;
+    // Getters
+    public double getSueldoPorHora() {
+        return sueldoPorHora;
     }
 
-    public void setHorasTrabajadas(int horas) {
-        this.horasTrabajadas += horas;
+    public int getHorasTrabajadas() {
+        return horasTrabajadas; // Siempre devolverá 24
     }
 }
 

@@ -8,14 +8,15 @@ public class Productor extends Empleado {
     private String tipoProducto;
     private int capacidadAlmacen;
 
-    public Productor(String nombre, double sueldoPorHora, String tipoProducto, int capacidadAlmacen) {
-        super(nombre, sueldoPorHora);
+    public Productor(double sueldoPorHora, String tipoProducto, int capacidadAlmacen) {
+        super(sueldoPorHora);
         this.tipoProducto = tipoProducto;
         this.capacidadAlmacen = capacidadAlmacen;
     }
 
     public void producir() {
-        // Lógica para producir el producto
+        // Implementación del método producir
+        System.out.println("Produciendo " + tipoProducto);
     }
 
     // Getters y Setters
@@ -23,8 +24,17 @@ public class Productor extends Empleado {
         return tipoProducto;
     }
 
+    public void setTipoProducto(String tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
+
     public int getCapacidadAlmacen() {
         return capacidadAlmacen;
     }
+
+    public void setCapacidadAlmacen(int capacidadAlmacen) {
+        this.capacidadAlmacen = capacidadAlmacen;
+    }
 }
+
 

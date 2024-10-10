@@ -5,20 +5,26 @@
 package Logic;
 
 public class Ensamblador extends Empleado {
-    private int tiempoEnsamblaje; // en días
+    private int tiempoEnsamblaje;
 
-    public Ensamblador(String nombre, double sueldoPorHora, int tiempoEnsamblaje) {
-        super(nombre, sueldoPorHora);
+    public Ensamblador(double sueldoPorHora, int tiempoEnsamblaje) {
+        super(sueldoPorHora);
         this.tiempoEnsamblaje = tiempoEnsamblaje;
     }
 
     public void ensamblarComputadora() {
-        // Lógica para ensamblar una computadora
+        // Implementación del método ensamblarComputadora
+        System.out.println("Ensamblando computadora en " + tiempoEnsamblaje + " horas.");
     }
 
     // Getters y Setters
     public int getTiempoEnsamblaje() {
         return tiempoEnsamblaje;
     }
+
+    public void setTiempoEnsamblaje(int tiempoEnsamblaje) {
+        this.tiempoEnsamblaje = tiempoEnsamblaje;
+    }
 }
+
 
